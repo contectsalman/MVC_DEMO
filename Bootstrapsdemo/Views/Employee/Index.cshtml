@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Bootstrapsdemo.tbl_Employee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.E_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_dept.D_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_dept.D_Name)
+        </td>
+        <td>
+           
+        </td>
+    </tr>
+}
+
+</table>
